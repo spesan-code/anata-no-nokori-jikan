@@ -7,7 +7,7 @@
   
   <!-- PWA設定 -->
   <link rel="manifest" href="/manifest.json" />
-  <meta name="theme-color" content="#3b82f6" />
+  <meta name="theme-color" content="#ffffff" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="残り時間" />
@@ -25,24 +25,54 @@
     }
   </script>
   <style>
-    /* 基本的なbodyのスタイル（テーマ切り替え用） */
-    body {
+    /* HTML要素とbody要素の背景色を明示的に設定 */
+    html {
       background: #fff;
       color: #000;
-      transition: background-color 0.3s ease, color 0.3s ease;
     }
-    .dark body {
+    .dark html {
       background: #000;
       color: #fff;
     }
-    /* リンク色 */
+    
+    /* 基本的なbodyのスタイル（テーマ切り替え用） */
+    body {
+      background: #fff !important;
+      color: #000;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      min-height: 100vh;
+    }
+    .dark body {
+      background: #000 !important;
+      color: #fff;
+    }
+    
+    /* ルート要素の背景色も設定 */
+    #root {
+      background: #fff;
+      min-height: 100vh;
+    }
+    .dark #root {
+      background: #000;
+    }
+    
+    /* リンク色 - 優先度を上げて確実に適用 */
     a {
-      color: #2563eb; /* ライトモード: 青 */
+      color: #2563eb !important; /* ライトモード: 青 */
       text-decoration: underline;
     }
     .dark a {
-      color: #fb923c; /* ダークモード: オレンジ */
+      color: #fb923c !important; /* ダークモード: オレンジ */
     }
+    
+    /* ボタンリンクも含める */
+    button.text-blue-600 {
+      color: #2563eb !important;
+    }
+    .dark button.text-blue-600 {
+      color: #fb923c !important;
+    }
+    
     /* スクロールバーのスタイル */
     ::-webkit-scrollbar {
       width: 8px;
