@@ -7,6 +7,7 @@ import { HomeScreen } from './components/HomeScreen';
 import { GoalAddScreen } from './components/GoalAddScreen';
 import { SideMenu } from './components/SideMenu';
 import { MenuIcon } from './components/icons';
+import PWAInstallPrompt from './components/PWAInstallPrompt';
 import About from './pages/About';
 import Terms from './pages/Terms';
 import Contact from './pages/Contact';
@@ -118,6 +119,7 @@ const AppContent: React.FC = () => {
           <Route path={AppRoutes.CONTACT} element={<Contact />} />
         </Routes>
       </main>
+      <PWAInstallPrompt />
     </div>
   );
 };
