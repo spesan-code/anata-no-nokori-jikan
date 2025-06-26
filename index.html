@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>あなたの残り時間</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class', // classベースのダークモードを強制
+      theme: {
+        extend: {
+          // primaryカラー定義を削除
+        }
+      }
+    }
+  </script>
+  <style>
+    /* 基本的なbodyのスタイル（テーマ切り替え用） */
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    /* スクロールバーのスタイル */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; /* ライトモードのトラック背景 */
+    }
+    .dark ::-webkit-scrollbar-track {
+      background: #1f2937; /* ダークモードのトラック背景 (例: gray-800) */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888; /* ライトモードのスクロールバーつまみ */
+      border-radius: 4px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #555; /* ダークモードのスクロールバーつまみ */
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #777;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body class="bg-white dark:bg-black text-black dark:text-white antialiased">
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
