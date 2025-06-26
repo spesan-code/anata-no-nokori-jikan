@@ -10,6 +10,7 @@ import { MenuIcon } from './components/icons';
 import PWAInstallPrompt from './components/PWAInstallPrompt';
 import About from './pages/About';
 import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
 import Contact from './pages/Contact';
 
 const AppContent: React.FC = () => {
@@ -116,6 +117,7 @@ const AppContent: React.FC = () => {
           />
           <Route path={AppRoutes.ABOUT} element={<About />} />
           <Route path={AppRoutes.TERMS} element={<Terms />} />
+          <Route path={AppRoutes.PRIVACY} element={<Privacy />} />
           <Route path={AppRoutes.CONTACT} element={<Contact />} />
         </Routes>
       </main>

@@ -27,7 +27,21 @@
   <style>
     /* 基本的なbodyのスタイル（テーマ切り替え用） */
     body {
+      background: #fff;
+      color: #000;
       transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .dark body {
+      background: #000;
+      color: #fff;
+    }
+    /* リンク色 */
+    a {
+      color: #2563eb; /* ライトモード: 青 */
+      text-decoration: underline;
+    }
+    .dark a {
+      color: #fb923c; /* ダークモード: オレンジ */
     }
     /* スクロールバーのスタイル */
     ::-webkit-scrollbar {

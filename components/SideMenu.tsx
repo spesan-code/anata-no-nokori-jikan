@@ -143,6 +143,9 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose, accountName
                 <button className="text-sm text-blue-600 hover:underline" onClick={() => { onClose(); navigate(AppRoutes.TERMS); }}>利用規約</button>
               </li>
               <li>
+                <button className="text-sm text-blue-600 hover:underline" onClick={() => { onClose(); navigate(AppRoutes.PRIVACY); }}>プライバシーポリシー</button>
+              </li>
+              <li>
                 <button className="text-sm text-blue-600 hover:underline" onClick={() => { onClose(); navigate(AppRoutes.CONTACT); }}>お問い合わせ</button>
               </li>
               <li>

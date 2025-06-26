@@ -3,6 +3,7 @@ export const AppRoutes = {
   ADD_GOAL: '/add-goal',
   ABOUT: '/about',
   TERMS: '/terms',
+  PRIVACY: '/privacy',
   CONTACT: '/contact',
 } as const;
 
